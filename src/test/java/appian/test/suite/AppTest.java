@@ -1,4 +1,4 @@
-package babl.appian.test.suite;
+package appian.test.suite;
 
 import static org.junit.Assert.assertTrue;
 
