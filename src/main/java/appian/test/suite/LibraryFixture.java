@@ -6,10 +6,27 @@ import java.time.LocalDate;
 import com.appiancorp.ps.automatedtest.fixture.SitesFixture;
 
 public class LibraryFixture extends SitesFixture {
+    /* Envirment and client constants */
+    public String BROWSER = "CHROME";
+    public String VERSION = "21.4";
+    public String URL = "https://yourAppianSite.com";
+    public String LOCALE = "en_GB";
+    public Integer TIMEOUT = 60;
+
     /* Folder constants */
     public String UPLOADS = "../resources/uploads/";
     public String DOWNLOADS = "../resources/downloads/";
     public String SCREENSHOTS = "../resources/screenshots/";
+
+    /* Initialise */
+    public void initialise() {
+        setTakeErrorScreenshotsTo(true);
+        setupWithBrowser(BROWSER);
+        setAppianUrlTo(URL);
+        setTimeoutSecondsTo(TIMEOUT);
+        setAppianVersionTo(VERSION);
+        setAppianLocaleTo(LOCALE);
+    }
 
     /* Date/time constants and methods */
     public String formatDate(String format, LocalDate date) {
